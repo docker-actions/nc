@@ -17,7 +17,7 @@ deploy:
     on:
       branch: master
   - provider: script
-    script: docker tag ${docker_org}/${image_name}:latest ${docker_org}/${image_name}:${version} && docker push ${docker_org}/${image_name}:${version}
+    script: docker tag ${docker_org}/${image_name}:latest ${docker_org}/${image_name}:${version}-${tag} && docker push ${docker_org}/${image_name}:${version}-${tag}
     on:
       branch: master
       tags: true
