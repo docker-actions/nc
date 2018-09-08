@@ -42,7 +42,7 @@ RUN mv ${ROOTFS}/sbin ${ROOTFS}/sbin.orig \
 COPY entrypoint.sh ${ROOTFS}/usr/local/bin/entrypoint.sh
 RUN chmod +x ${ROOTFS}/usr/local/bin/entrypoint.sh
 
-FROM actions/bash:4.4.18-6
+FROM actions/bash:4.4.18-8
 LABEL maintainer = "ilja+docker@bobkevic.com"
 
 ARG ROOTFS=/build/rootfs
